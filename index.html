@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صلاح أحمدين | تحميل تطبيق أناشيد إسلامية</title>
+    
+    <!-- Meta Tags for SEO and Social Sharing -->
+    <meta name="description" content="حمّل تطبيق أناشيد إسلامية مجاناً - يعمل بدون إنترنت مع مئات الأناشيد الإسلامية">
+    <meta name="keywords" content="أناشيد إسلامية, تحميل تطبيق, صلاح أحمدين, تطبيقات أندرويد, أناشيد بدون نت">
+    <meta name="author" content="صلاح أحمدين">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ar_AR">
+    <meta property="og:site_name" content="صلاح أحمدين">
+    <meta property="og:title" content="تحميل تطبيق أناشيد إسلامية - مجاني ويعمل بدون إنترنت">
+    <meta property="og:description" content="حمّل الآن تطبيق الأناشيد الإسلامية الكامل مع مئات الأناشيد، يعمل بدون إنترنت، مجاناً تماماً">
+
+    
+    <!-- صورة Open Graph -->
+    <meta property="og:image" content="https://salahapis.wuaze.com/00.png">
+    <meta property="og:image:secure_url" content="https://salahapis.wuaze.com/00.png">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="تطبيق أناشيد إسلامية">
+    
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="تحميل تطبيق أناشيد إسلامية">
+    <meta name="twitter:description" content="تطبيق الأناشيد الإسلامية الكامل - حمله الآن مجاناً">
+    <meta name="twitter:image" content="https://salahapis.wuaze.com/00.png">
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#1a365d">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://salahapis.wuaze.com/favicon.ico">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0a1929, #1a365d);
+            color: white;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 40px 0;
+        }
+        
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            border-radius: 25px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 4px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .app-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+        .app-icon i {
+            font-size: 50px;
+            color: white;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .app-icon.has-image i {
+            display: none;
+        }
+        
+        .app-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #60a5fa, #93c5fd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .app-subtitle {
+            color: #94a3b8;
+            font-size: 1.1rem;
+        }
+        
+        /* Download Card */
+        .download-card {
+            background: rgba(30, 41, 59, 0.8);
+            border-radius: 15px;
+            padding: 40px;
+            margin: 30px 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+        
+        .app-info {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .info-row {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #cbd5e1;
+        }
+        
+        .info-item i {
+            color: #60a5fa;
+        }
+        
+        /* Download Button */
+        .download-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            color: white;
+            text-decoration: none;
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: all 0.3s;
+            margin: 30px auto;
+            max-width: 400px;
+            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+            border: none;
+            cursor: pointer;
+        }
+        
+        .download-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 25px rgba(59, 130, 246, 0.4);
+            background: linear-gradient(135deg, #4f8fff, #2563eb);
+        }
+        
+        .download-button i {
+            font-size: 24px;
+        }
+        
+        /* Features */
+        .features {
+            margin: 40px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: #f8fafc;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .feature {
+            background: rgba(30, 41, 59, 0.6);
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 4px solid #3b82f6;
+        }
+        
+        .feature i {
+            font-size: 28px;
+            color: #60a5fa;
+            margin-bottom: 15px;
+        }
+        
+        .feature h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #f8fafc;
+        }
+        
+        .feature p {
+            color: #94a3b8;
+            font-size: 0.95rem;
+        }
+        
+        /* Developer */
+        .developer {
+            text-align: center;
+            margin: 40px 0;
+            padding: 30px;
+            background: rgba(30, 41, 59, 0.6);
+            border-radius: 15px;
+        }
+        
+        .dev-name {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            color: #f8fafc;
+        }
+        
+        .dev-title {
+            color: #60a5fa;
+            margin-bottom: 15px;
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 30px 0;
+            color: #94a3b8;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 40px;
+        }
+        
+        .footer p {
+            margin: 5px 0;
+        }
+        
+        .version {
+            color: #60a5fa;
+            font-weight: bold;
+        }
+        
+        /* Social Links */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            font-size: 20px;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        
+        .social-link:hover {
+            background: #3b82f6;
+            transform: translateY(-3px);
+        }
+        
+        /* Instructions */
+        .instructions {
+            background: rgba(30, 41, 59, 0.6);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border-right: 4px solid #10b981;
+        }
+        
+        .instructions h3 {
+            color: #10b981;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .instructions ul {
+            padding-right: 20px;
+            color: #cbd5e1;
+        }
+        
+        .instructions li {
+            margin-bottom: 8px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .app-title {
+                font-size: 2rem;
+            }
+            
+            .download-card {
+                padding: 25px;
+            }
+            
+            .download-button {
+                padding: 15px 30px;
+                font-size: 1.1rem;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Simple Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header fade-in">
+            <div class="app-icon" id="appIcon">
+                <!-- سيتم تحميل الصورة عبر الجافاسكريبت -->
+                <i class="fas fa-music"></i>
+            </div>
+            <h1 class="app-title">أناشيد إسلامية</h1>
+            <p class="app-subtitle">تطبيق الأناشيد الإسلامية الكامل - يعمل بدون إنترنت</p>
+        </header>
+
+        <!-- Download Card -->
+        <div class="download-card fade-in">
+            <div class="app-info">
+                <h2 style="color: #f8fafc; margin-bottom: 15px;">حمل التطبيق الآن</h2>
+                <p style="color: #94a3b8; margin-bottom: 20px;">مجاني وآمن وسهل الاستخدام</p>
+                
+                <div class="info-row">
+                    <div class="info-item">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>حجم التطبيق: 80.39 MB</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-code-branch"></i>
+                        <span>الإصدار: 1.0</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-android"></i>
+                        <span>أندرويد 5.0+</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- زر التحميل مع الرابط المباشر -->
+            <a href="https://salahapis.wuaze.com/اناشيد-اسلاميه.apk" class="download-button" download="Anasheed_Islamiyah.apk">
+                <i class="fas fa-download"></i>
+                تحميل التطبيق (APK)
+            </a>
+            
+            <div class="instructions">
+                <h3><i class="fas fa-info-circle"></i> معلومات التحميل:</h3>
+                <ul>
+                    <li>الرابط: <strong>https://salahapis.wuaze.com/اناشيد-اسلاميه.apk</strong></li>
+                    <li>اضغط على زر التحميل أعلاه للحصول على الملف مباشرة</li>
+                    <li>بعد التحميل، افتح الملف لتثبيت التطبيق</li>
+                </ul>
+            </div>
+            
+            <p style="text-align: center; color: #94a3b8; margin-top: 15px; font-size: 0.9rem;">
+                APK مباشر - لا يحتاج متجر - يعمل على جميع الأجهزة
+            </p>
+        </div>
+
+        <!-- Features -->
+        <section class="features fade-in">
+            <h2 class="section-title">مميزات التطبيق</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <i class="fas fa-wifi-slash"></i>
+                    <h3>بدون إنترنت</h3>
+                    <p>استمع للأناشيد في أي وقت بدون اتصال بالإنترنت</p>
+                </div>
+                
+                <div class="feature">
+                    <i class="fas fa-headphones-alt"></i>
+                    <h3>مكتبة ضخمة</h3>
+                    <p>مئات الأناشيد الإسلامية بأصوات أشهر المنشدين</p>
+                </div>
+                
+                <div class="feature">
+                    <i class="fas fa-heart"></i>
+                    <h3>المفضلة</h3>
+                    <p>احفظ أناشيدك المفضلة للوصول السريع</p>
+                </div>
+                
+                <div class="feature">
+                    <i class="fas fa-play-circle"></i>
+                    <h3>مشغل متكامل</h3>
+                    <p>تكرار، تشغيل عشوائي، تحكم كامل</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Developer Info -->
+        <section class="developer fade-in">
+            <h2 style="color: #f8fafc; margin-bottom: 20px;">عن المطور</h2>
+            <h3 class="dev-name">صلاح أحمدين</h3>
+            <p class="dev-title">مطور تطبيقات أندرويد وتطبيقات الويب</p>
+            <p style="color: #94a3b8; max-width: 600px; margin: 0 auto;">
+                متخصص في تطوير التطبيقات الإسلامية والتطبيقات المفيدة للجميع
+            </p>
+            
+            <!-- Social Links -->
+            <div class="social-links">
+                <a href="#" class="social-link" title="تليجرام">
+                    <i class="fab fa-telegram"></i>
+                </a>
+                <a href="#" class="social-link" title="تويتر">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="social-link" title="جيت هاب">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="#" class="social-link" title="الموقع">
+                    <i class="fas fa-globe"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>© 2024 تطبيق أناشيد إسلامية - جميع الحقوق محفوظة</p>
+            <p>المطور: <strong>صلاح أحمدين</strong></p>
+            <p>الإصدار: <span class="version">الأول 1.0</span></p>
+            <p>رابط التحميل المباشر: <strong>https://salahapis.wuaze.com/اناشيد-اسلاميه.apk</strong></p>
+            <p style="margin-top: 10px; font-size: 0.9rem; color: #64748b;">
+                يعمل على جميع إصدارات أندرويد 5.0 فما فوق
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        // Simple download animation
+        const downloadBtn = document.querySelector('.download-button');
+        
+        downloadBtn.addEventListener('click', function(e) {
+            // Optional: Add download tracking
+            console.log('بدأ تحميل تطبيق أناشيد إسلامية');
+            
+            // Show simple message
+            setTimeout(() => {
+                alert('شكراً لتحميلك التطبيق! جاري التحميل من الرابط المباشر...');
+            }, 500);
+        });
+        
+        // Add fade-in animation to elements on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+        
+        // Observe all sections
+        document.querySelectorAll('.download-card, .features, .developer').forEach(section => {
+            observer.observe(section);
+        });
+        
+        // محاولة تحميل صورة أيقونة التطبيق
+        function loadAppIcon() {
+            const appIcon = document.getElementById('appIcon');
+            const iconUrl = "https://salahapis.wuaze.com/00.png"; // صفر صفر بي ان جي
+            
+            const img = new Image();
+            img.onload = function() {
+                // إذا نجح تحميل الصورة
+                appIcon.innerHTML = '';
+                appIcon.appendChild(img);
+                appIcon.classList.add('has-image');
+            };
+            img.onerror = function() {
+                // إذا فشل تحميل الصورة، استخدم الأيقونة الأصلية
+                console.log('لم يتم العثور على صورة الأيقونة، استخدام الأيقونة الافتراضية');
+                appIcon.innerHTML = '<i class="fas fa-music"></i>';
+                appIcon.classList.remove('has-image');
+            };
+            
+            img.src = iconUrl;
+            img.alt = "أيقونة تطبيق أناشيد إسلامية";
+        }
+        
+        // تحميل الأيقونة عند بدء الصفحة
+        window.addEventListener('DOMContentLoaded', loadAppIcon);
+    </script>
+</body>
+</html>
