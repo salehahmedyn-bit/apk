@@ -1,0 +1,35 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.mygithub.browser'
+    compileSdk 34 // أحدث إصدار للأندرويد
+
+    defaultConfig {
+        applicationId "com.mygithub.browser"
+        minSdk 21 // يعمل على أندرويد 5.0 فما فوق
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    
+    // ضبط الجافا على الإصدار 17 ليتوافق مع GitHub Actions
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    // المكتبات الأساسية لعمل التطبيق
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.11.0'
+}
